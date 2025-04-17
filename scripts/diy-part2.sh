@@ -254,7 +254,6 @@ mkdir luci-app-hypermodem
 mkdir fibocom-dial
 mkdir fibocom_MHI
 mkdir fibocom_QMI_WWAN
-mkdir quectel_SRPD_PCIE
 mkdir quectel_Gobinet
 mkdir meig-cm
 mkdir meig_QMI_WWAN
@@ -265,7 +264,6 @@ cp -rf ../../Modem-Support/luci-app-hypermodem/* luci-app-hypermodem
 cp -rf ../../Modem-Support/fibocom-dial/* fibocom-dial
 cp -rf ../../Modem-Support/fibocom_MHI/* fibocom_MHI
 cp -rf ../../Modem-Support/fibocom_QMI_WWAN/* fibocom_QMI_WWAN
-cp -rf ../../Modem-Support/quectel_SRPD_PCIE/* quectel_SRPD_PCIE
 cp -rf ../../Modem-Support/quectel_Gobinet/* quectel_Gobinet
 cp -rf ../../Modem-Support/meig-cm/* meig-cm
 cp -rf ../../Modem-Support/meig_QMI_WWAN/* meig_QMI_WWAN
