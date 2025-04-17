@@ -251,10 +251,25 @@ mkdir quectel_QMI_WWAN
 mkdir quectel_cm_5G
 mkdir quectel_MHI
 mkdir luci-app-hypermodem
+mkdir fibocom-dial
+mkdir fibocom_MHI
+mkdir fibocom_QMI_WWAN
+mkdir quectel_SRPD_PCIE
+mkdir quectel_Gobinet
+mkdir meig-cm
+mkdir meig_QMI_WWAN
 cp -rf ../../Modem-Support/quectel_QMI_WWAN/* quectel_QMI_WWAN
 cp -rf ../../Modem-Support/quectel_cm_5G/* quectel_cm_5G
 cp -rf ../../Modem-Support/quectel_MHI/* quectel_MHI
 cp -rf ../../Modem-Support/luci-app-hypermodem/* luci-app-hypermodem
+cp -rf ../../Modem-Support/fibocom-dial/* fibocom-dial
+cp -rf ../../Modem-Support/fibocom_MHI/* fibocom_MHI
+cp -rf ../../Modem-Support/fibocom_QMI_WWAN/* fibocom_QMI_WWAN
+cp -rf ../../Modem-Support/quectel_SRPD_PCIE/* quectel_SRPD_PCIE
+cp -rf ../../Modem-Support/quectel_Gobinet/* quectel_Gobinet
+cp -rf ../../Modem-Support/meig-cm/* meig-cm
+cp -rf ../../Modem-Support/meig_QMI_WWAN/* meig_QMI_WWAN
+
 
 # 5G模组短信插件
 # cp -rf temp/luci-app-sms-tool/* luci-app-sms-tool
@@ -276,9 +291,9 @@ rm -rf ../../Modem-Support/luci-app-modem/po/zh_Hans #解决汉化问题
 popd
 
 # 5G模组拨号脚本
-# mkdir -p package/base-files/files/root/5GModem
-# cp -rf $GITHUB_WORKSPACE/tools/5G模组拨号脚本/5GModem/* package/base-files/files/root/5GModem
-# echo -e "#* * * * * bash /root/5GModem/5g_crontab.sh" >> package/istoreos-files/files/etc/crontabs/root
+mkdir -p package/base-files/files/root/5GModem
+cp -rf $GITHUB_WORKSPACE/tools/5G模组拨号脚本/5GModem/* package/base-files/files/root/5GModem
+echo -e "#* * * * * bash /root/5GModem/5g_crontab.sh" >> package/istoreos-files/files/etc/crontabs/root
 
 # 添加第三方应用
 echo "
@@ -438,7 +453,7 @@ CONFIG_PACKAGE_ath10k-firmware-qca9984=y
 #5G相关
 echo "
 # 5G模组信号插件
-# CONFIG_PACKAGE_ext-rooter-basic=y
+CONFIG_PACKAGE_ext-rooter-basic=y
 
 # 5G模组短信插件
 CONFIG_PACKAGE_luci-app-sms-tool=y
@@ -448,22 +463,22 @@ CONFIG_PACKAGE_luci-app-sms-tool=y
 # CONFIG_PACKAGE_luci-app-3ginfo=y
 
 # 5G模组信息插件+AT工具
-# CONFIG_PACKAGE_luci-app-cpe=y
-# CONFIG_PACKAGE_sendat=y
+CONFIG_PACKAGE_luci-app-cpe=y
+CONFIG_PACKAGE_sendat=y
 CONFIG_PACKAGE_sms-tool=y
 CONFIG_PACKAGE_luci-app-modem=y
 
 # QMI拨号工具（移远，广和通）
-# CONFIG_PACKAGE_quectel-CM-5G=y
-# CONFIG_PACKAGE_fibocom-dial=y
+CONFIG_PACKAGE_quectel-CM-5G=y
+CONFIG_PACKAGE_fibocom-dial=y
 
 # QMI拨号软件
-# CONFIG_PACKAGE_kmod-qmi_wwan_f=y
-# CONFIG_PACKAGE_luci-app-hypermodem=y
+CONFIG_PACKAGE_kmod-qmi_wwan_f=y
+CONFIG_PACKAGE_luci-app-hypermodem=y
 
 # Gobinet拨号软件
-# CONFIG_PACKAGE_kmod-gobinet=y
-# CONFIG_PACKAGE_luci-app-gobinetmodem=y
+CONFIG_PACKAGE_kmod-gobinet=y
+CONFIG_PACKAGE_luci-app-gobinetmodem=y
 
 # 串口调试工具
 CONFIG_PACKAGE_minicom=y
