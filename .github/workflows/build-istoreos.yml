@@ -48,8 +48,6 @@ jobs:
           - istoreos-22.03
           # - istoreos-23.05
         ARCHITECTURE:
-          - rk33xx
-          - rk35xx
           - x86
         os:
           - ubuntu-22.04
@@ -220,6 +218,7 @@ jobs:
       with:
         name: OpenWrt_firmware${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
+        overwrite: true  # 添加此行，覆盖已存在的同名构件
 
     - name: 生成发布标签
       id: tag
