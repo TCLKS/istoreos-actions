@@ -291,9 +291,9 @@ rm -rf ../../Modem-Support/luci-app-modem/po/zh_Hans #解决汉化问题
 popd
 
 # 5G模组拨号脚本
-mkdir -p package/base-files/files/root/5GModem
-cp -rf $GITHUB_WORKSPACE/tools/5G模组拨号脚本/5GModem/* package/base-files/files/root/5GModem
-echo -e "#* * * * * bash /root/5GModem/5g_crontab.sh" >> package/istoreos-files/files/etc/crontabs/root
+# mkdir -p package/base-files/files/root/5GModem
+# cp -rf $GITHUB_WORKSPACE/tools/5G模组拨号脚本/5GModem/* package/base-files/files/root/5GModem
+# echo -e "#* * * * * bash /root/5GModem/5g_crontab.sh" >> package/istoreos-files/files/etc/crontabs/root
 
 # 添加第三方应用
 echo "
