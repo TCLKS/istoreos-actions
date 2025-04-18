@@ -36,11 +36,14 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write  # 授予写入权限
+      packages: read   # 授予读取包权限
     strategy:
       matrix:
         REPO_BRANCH:
@@ -48,8 +51,6 @@ jobs:
           # - istoreos-22.03
           - istoreos-23.05
         ARCHITECTURE:
-          - rk33xx
-          - rk35xx
           - x86
         os:
           - ubuntu-22.04
@@ -156,7 +157,7 @@ jobs:
     - name: 设置系统名称
       run: |
         cd openwrt
-        set_os_name=${{ github.event.inputs.os_name }}
+        set_os_name="${{ github.event.inputs.os_name }}"
         if [ -z "$set_os_name" ]; then
             set_os_name="iStore OS"
         fi
@@ -220,12 +221,13 @@ jobs:
       with:
         name: OpenWrt_firmware${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
+        overwrite: true  # 添加此行，覆盖已存在的同名构件
 
     - name: 生成发布标签
       id: tag
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::${{ matrix.ARCHITECTURE }}-23.05"
+        echo "::set-output name=release_tag::${{ matrix.ARCHITECTURE }}"
         SET_IP=${{ github.event.inputs.lan_ip }}
         if [ -z "$SET_IP" ]; then
             SET_IP="192.168.10.1"
@@ -246,7 +248,7 @@ jobs:
 
         🔒 密码: password
 
-        📒 说明: 单网口设备默认网口为LAN（旁路由模式），需要接入主路由器后进后台查找对应IP地址访问
+        📒 说明: 单网口设备默认网口为LAN（旁路由模式），需要接入主路由器后进后台查找对应IP地址访问。
                  双网口及以上设备，默认网口为WAN+LAN（主路由模式），接入LAN可直接访问 " >> release.txt
         echo "::set-output name=status::success"
 
