@@ -44,6 +44,17 @@ jobs:
     permissions:
       contents: write  # 授予写入权限
       packages: read   # 授予读取包权限
+      actions: write
+      checks: write
+      deployments: write
+      id-token: write
+      issues: write
+      discussions: write
+      pages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
     strategy:
       matrix:
         REPO_BRANCH:
