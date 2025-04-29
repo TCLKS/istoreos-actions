@@ -254,7 +254,6 @@ mkdir fibocom-dial
 mkdir fibocom_QMI_WWAN
 mkdir quectel_Gobinet
 mkdir meig-cm
-mkdir meig_QMI_WWAN
 cp -rf ../../Modem-Support/quectel_QMI_WWAN/* quectel_QMI_WWAN
 cp -rf ../../Modem-Support/quectel_cm_5G/* quectel_cm_5G
 cp -rf ../../Modem-Support/luci-app-hypermodem/* luci-app-hypermodem
@@ -262,7 +261,6 @@ cp -rf ../../Modem-Support/fibocom-dial/* fibocom-dial
 cp -rf ../../Modem-Support/fibocom_QMI_WWAN/* fibocom_QMI_WWAN
 cp -rf ../../Modem-Support/quectel_Gobinet/* quectel_Gobinet
 cp -rf ../../Modem-Support/meig-cm/* meig-cm
-cp -rf ../../Modem-Support/meig_QMI_WWAN/* meig_QMI_WWAN
 
 
 # 5G模组短信插件
