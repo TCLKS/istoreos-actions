@@ -1,10 +1,10 @@
-# 中文 | [English](https://github.com/Siriling/istoreos-actions/blob/main/EngLish.md)
+# 中文 | [English](https://github.com/TCLKS/istoreos-actions/blob/main/EngLish.md)
 
 # iStoreOS 定制固件
 
-[![iStore使用文档](https://img.shields.io/badge/使用文档-iStore%20OS-brightgreen?style=flat-square)](https://doc.linkease.com/zh/guide/istoreos) [![最新固件下载](https://img.shields.io/github/v/release/Siriling/istoreos-actions?style=flat-square&label=最新固件下载)](../../releases)
+[![iStore使用文档](https://img.shields.io/badge/使用文档-iStore%20OS-brightgreen?style=flat-square)](https://doc.linkease.com/zh/guide/istoreos) [![最新固件下载](https://img.shields.io/github/v/release/TCLKS/istoreos-actions?style=flat-square&label=最新固件下载)](../../releases)
 
-![支持设备](https://img.shields.io/badge/支持设备:-blueviolet.svg?style=flat-square) ![H88K](https://img.shields.io/badge/H88K-blue.svg?style=flat-square) ![H66K](https://img.shields.io/badge/H66K-blue.svg?style=flat-square) ![H68K](https://img.shields.io/badge/H68K-blue.svg?style=flat-square) ![H69K](https://img.shields.io/badge/H69K-blue.svg?style=flat-square) ![R5S](https://img.shields.io/badge/R5S-blue.svg?style=flat-square) ![R6S](https://img.shields.io/badge/R6S-blue.svg?style=flat-square) ![R66S](https://img.shields.io/badge/R66S-blue.svg?style=flat-square) ![R68S](https://img.shields.io/badge/R68S-blue.svg?style=flat-square) ![STATION P2](https://img.shields.io/badge/STATION%20P2-blue.svg?style=flat-square) ![T68M](https://img.shields.io/badge/T68M-blue.svg?style=flat-square) ![XGP](https://img.shields.io/badge/XGP-blue.svg?style=flat-square)
+![支持设备](https://img.shields.io/badge/支持设备:-blueviolet.svg?style=flat-square) ![X86/64](https://img.shields.io/badge/X86/64-brightgreen?style=flat-square) 
 
 # 目录
 
@@ -58,38 +58,9 @@
 
 ## 支持架构
 
-- RK33xx
-- RK35xx
 - x86
 
 ## 架构对应的镜像包名称
-
-### RK33xx 架构
-
-| 设备                | 包名称                                                       |
-| ------------------- | ------------------------------------------------------------ |
-| R2S                 | istoreos-rockchip-armv8-friendlyarm_nanopi-r2s-squashfs-sysupgrade.img.gz |
-| R4S                 | istoreos-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz |
-| R4SE                | istoreos-rockchip-armv8-friendlyarm_nanopi-r4se-squashfs-sysupgrade.img.gz |
-| ARMSOM P2-PRO       | istoreos-rockchip-armv8-armsom_p2-pro-squashfs-sysupgrade.img.gz |
-| ROCKPRO64           | istoreos-rockchip-armv8-pine64_rockpro64-squashfs-sysupgrade.img.gz |
-| ROCK-Pi-4A          | istoreos-rockchip-armv8-radxa_rock-pi-4a-squashfs-sysupgrade.img.gz |
-| ROCKCHIP RK3308 EVB | istoreos-rockchip-armv8-rockchip_rk3308_evb-squashfs-sysupgrade.img.gz |
-
-### RK35xx 架构
-
-| 设备           | 包名称                                                       |
-| -------------- | ------------------------------------------------------------ |
-| H28K           | istoreos-rockchip-rk35xx-hlink_h28k-squashfs-sysupgrade.img.gz |
-| H66K/H68K/H69K | istoreos-rockchip-rk35xx-hinlink_opc-h6xk-squashfs-combined.img.gz |
-| H88K           | istoreos-rockchip-rk35xx-hinlink_h88k-squashfs-combined.img.gz |
-| NANOPI-R5S     | istoreos-rockchip-rk35xx-friendlyarm_nanopi-r5s-squashfs-combined.img.gz |
-| NANOPI-R6S     | istoreos-rockchip-rk35xx-friendlyarm_nanopi-r6s-squashfs-combined.img.gz |
-| R66S/R68S      | istoreos-rockchip-rk35xx-fastrhino_r6xs-squashfs-combined.img.gz |
-| STATION-P2     | istoreos-rockchip-rk35xx-firefly_station-p2-squashfs-combined.img.gz |
-| T68M           | istoreos-rockchip-rk35xx-lyt_t68m-squashfs-combined.img.gz   |
-| XGP            | istoreos-rockchip-rk35xx-nlnet_xgp-squashfs-combined.img.gz  |
-
 ### x86 架构
 
 | 启动       | 包名称                                              |
@@ -99,7 +70,7 @@
 
 # 四、资源
 
-- 5G模组拨号脚本：[点击查看](https://github.com/Siriling/istoreos-actions/tree/main/tools/5G%E6%A8%A1%E7%BB%84%E6%8B%A8%E5%8F%B7%E8%84%9A%E6%9C%AC)
+- 5G模组拨号脚本：[点击查看](https://github.com/TCLKS/istoreos-actions/tree/main/tools/5G%E6%A8%A1%E7%BB%84%E6%8B%A8%E5%8F%B7%E8%84%9A%E6%9C%AC)
 - 5G模组使用教程：[点击查看](https://blog.siriling.com:1212/2023/03/18/openwrt-5g-modem/)
 
 # 五、展示
